@@ -116,3 +116,42 @@ hr {
 a {
   text-decoration: none;
 }
+
+/* Tablet: desactiva floats para imagen y texto */
+@media (max-width: 900px) {
+  .profile,
+  .skills,
+  .contact-me {
+    width: 82%;
+  }
+
+  .skill-row {
+    text-align: center;
+  }
+
+  .skill-img-left,
+  .skill-img-right {
+    float: none;
+    width: 40%;
+    margin: 0 auto 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .profile,
+  .skills,
+  .contact-me {
+    width: 92%;
+  }
+
+  .skill-img-left,
+  .skill-img-right {
+    width: 60%;
+  }
+
+  .profile .description,
+  .skills .skill-row p {
+    max-width: 100%;
+  }
+}
