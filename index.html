@@ -5,20 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bryan Guillen - Portafolio</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" defer></script>
 </head>
 <body>
+  <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Cambiar tema">
+    <img class="theme-toggle-icon" src="assets/theme-icon.png" alt="">
+    <span id="theme-toggle-text">Modo oscuro</span>
+  </button>
   <div class="top-container">
     <h1>¡Soy Bryan!</h1>
-    <p class="font-header">un <em>Ingeniero de Software</em></p>
-    <!-- aqui subire una imagen luego -->
-    <img class="hero-image" src="#" alt="Hero image">
+    <p class="font-header">un <em>Senior Software Engineer</em></p>
   </div>
+  
+  <section id="quote-banner" class="quote-banner" aria-live="polite">
+    <p class="quote-label">Frase del dia</p>
+    <p id="quote-text" class="quote-text">Cargando frase...</p>
+    <p id="quote-author" class="quote-author"></p>
+    <p id="quote-status" class="quote-status"></p>
+    <button id="new-quote-btn" class="new-quote-btn">Nueva frase</button>
+  </section>
 
   <div class="middle-container">
     <div class="profile">
-      <!-- aqui subire una imagen luego -->
-      <img class="profilepic" src="#" alt="Foto de perfil">
-      <h2>¡Hola!</h2>
+      <img class="profilepic" src="assets/profile_pic.jpeg" alt="Foto de perfil de Bryan">
       <p class="description">Ingeniero de Software con más de 6 años de experiencia enfocado en el Desarrollo Orientado a Productos. Habiendo trabajado en los EE. UU. y siendo trilingüe, aporto una perspectiva multicultural y una experiencia diversa. Apasionado por convertir ideas en productos y servicios, no solo en código.</p>
     </div>
 
@@ -27,7 +36,6 @@
     <div class="skills text-only">
       <h2>Experiencia laboral</h2>
       <div class="skill-row">
-        <!-- aqui subire una imagen luego -->
         <img class="skill-img-right" src="#" alt="">
         <h3>Frontend y liderazgo técnico</h3>
         <p>Enfocado en FrontEnd: nuevas funcionalidades, mantenimiento y corrección de bugs. Lideré la migración de una base de código de Angular y CoffeeScript a Vue y JavaScript, aplicando estándares rigurosos para todo el equipo. Uso habitual: Vue/Vuex, JavaScript, SCSS; también BackEnd con NestJS, TypeORM y TypeScript. He participado en decisiones de arquitectura, definido estándares de código a nivel departamento y mentorizado a desarrolladores junior.</p>
@@ -39,7 +47,6 @@
     <div class="skills text-only">
       <h2>Estudios</h2>
       <div class="skill-row">
-        <!-- aqui subire una imagen luego -->
         <img class="skill-img-left" src="#" alt="">
         <p class="description">Graduado en Ingeniería de Software de la Universidad Brigham Young en Estados Unidos. También he completado más de 20 certificaciones y/o cursos luego de graduarme.</p>
       </div>
@@ -50,14 +57,16 @@
     <div class="skills">
       <h2>Algunos de mis proyectos</h2>
       <div class="skill-row">
-        <!-- aqui subire una imagen luego -->
-        <img class="skill-img-left" src="#" alt="Panel administrativo e-commerce">
+        <a href="https://github.com/bryanguillenlds/admin-shop-fe" target="_blank" rel="noopener noreferrer">
+          <img class="skill-img-left project-image" src="assets/e-commerce.png" alt="Panel administrativo e-commerce">
+        </a>
         <h3>Panel administrativo e-commerce</h3>
         <p>PoC de panel de administración para una plataforma e-commerce. Vue 3, Pinia, TanStack Query y Tailwind. Incluye autenticación, CRUD de productos con subida de imágenes, paginación y notificaciones. Clean Architecture.</p>
       </div>
       <div class="skill-row">
-        <!-- aqui subire una imagen luego -->
-        <img class="skill-img-right" src="#" alt="App de mapas">
+        <a href="https://super-cendol-9636b7.netlify.app/#/" target="_blank" rel="noopener noreferrer">
+          <img class="skill-img-right project-image" src="assets/maps.png" alt="App de mapas">
+        </a>
         <h3>App de mapas</h3>
         <p>Aplicación de mapas con Vue 3, Vuex y TypeScript. Búsqueda y visualización de rutas en mapa. Desarrollada con enfoque OOP.</p>
       </div>

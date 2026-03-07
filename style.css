@@ -6,16 +6,111 @@ body {
   margin: 0;
   text-align: center;
   font-family: sans-serif;
+  background-color: #f4efe6;
+  color: #2f2a24;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.theme-warm {
+  background-color: #f4efe6;
+  color: #2f2a24;
+}
+
+body.theme-dark {
+  background-color: #1f2937;
+  color: #f4efe6;
 }
 
 .top-container {
-  padding: 2rem 1rem;
+  padding: 3.5rem 0 2rem;
 }
 
 .hero-image {
   display: block;
   max-width: 100%;
   margin: 1rem auto;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #2f2a24;
+  color: #f4efe6;
+}
+
+body.theme-dark .theme-toggle-btn {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.theme-toggle-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.quote-banner {
+  width: 100%;
+  margin: 0;
+  padding: 1.35rem 1.4rem;
+  text-align: center;
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+body.theme-dark .quote-banner {
+  background-color: #f4efe6;
+  color: #2f2a24;
+}
+
+.quote-label {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.quote-text {
+  margin: 0.6rem 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.quote-author {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.quote-status {
+  min-height: 1.2rem;
+  margin: 0.55rem 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.new-quote-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #f4efe6;
+  color: #1f2937;
+}
+
+body.theme-dark .new-quote-btn {
+  background-color: #1f2937;
+  color: #f4efe6;
 }
 
 hr {
@@ -45,7 +140,10 @@ hr {
 
 .profilepic {
   display: block;
-  max-width: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
   margin: 0 auto 1rem;
 }
 
@@ -74,6 +172,10 @@ hr {
   object-fit: cover;
 }
 
+.project-image {
+  cursor: pointer;
+}
+
 .skills {
   padding: 1rem 0;
   text-align: center;
@@ -96,11 +198,11 @@ hr {
 }
 
 .contact-me {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .bottom-container {
-  padding: 2rem 1rem;
+  padding: 0 1rem 2rem;
 }
 
 .footer-link {
@@ -117,7 +219,7 @@ a {
   text-decoration: none;
 }
 
-/* Tablet: desactiva floats para imagen y texto */
+/* Tablet: quitamos los floats para imagen y texto */
 @media (max-width: 900px) {
   .profile,
   .skills,
@@ -137,12 +239,18 @@ a {
   }
 }
 
-/* Mobile */
+/* Movil */
 @media (max-width: 600px) {
   .profile,
   .skills,
   .contact-me {
     width: 92%;
+  }
+
+  .theme-toggle-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .skill-img-left,
